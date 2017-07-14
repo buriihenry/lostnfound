@@ -43,7 +43,6 @@ if(isset($_POST["send"])){
 
     <title>Admin Home</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
