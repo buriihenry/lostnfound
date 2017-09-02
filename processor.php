@@ -394,6 +394,7 @@ session_start();
                                 echo "<h3>You entered the wrong password!</h3>";
                             }else{
                                 echo "<h3>The username ".$_POST['username']." does not exist!</h3>";
+                                <!-- end of the processor -->
                             }
                         }*/
                     ?>
