@@ -16,7 +16,6 @@ session_start();
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link href="css/business-casual.css" rel="stylesheet">
 
     <!-- Fonts -->
