@@ -1,3 +1,7 @@
+
+
+
+
 <?php
 
 require_once("dbconnect.php");
@@ -82,7 +86,7 @@ if(isset($_POST["send"])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Admin Lost N found </a>
+                <a class="navbar-brand" href="#">Login Admin Lost N found </a>
             </div>
             <!-- Top Menu Items -->
             
@@ -140,7 +144,7 @@ if(isset($_POST["send"])){
                 <div class="row">
                     <div class="col-lg-12">
                        
-                     <h2>Admin portfolio</h2>
+                    
                    
                     </div>
                 </div>

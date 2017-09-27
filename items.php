@@ -90,9 +90,6 @@
                    <li>
                         <a href="pay.php"><i class="fa fa-fw fa-edit"></i> View Payment</a>
                     </li>
-                    <li>
-                        <a href="items.php"><i class="fa fa-fw fa-edit"></i> View Lost Items</a>
-                    </li>
 
                    
                  
@@ -138,35 +135,40 @@
              <table cellpadding="1" cellspacing="1" border="1" class="table  table-bordered" id="example">
                              
                 <p> <a style="margin-left: 500px;" href="#"><input type="button" class="btn btn-success" value="Back"></a>
-                <a  href="add_users.php" class="btn btn-primary" style="color:white;"><i class="icon-plus"></i>&nbsp;Add User</a></p>
               
                                 <thead  id="example">
                                     <tr>
                                         <th  id="example"><font color="purple">ID</font></th>
-                                        <th  id="example"><font color="purple">First Name</font></th>
-                                        <th  id="example"><font color="purple">Last Name</font></th>
-                                        <th  id="example"><font color="purple">Email</font></th>
-                                        <th  id="example"><font color="purple">phonenumber</font></th>
-                                        <th  id="example"><font color="purple">Password</font></th>
-                                        <th  id="example"><font color="purple">Actions</font></th> 
+                                        <th  id="example"><font color="purple">Item Type</font></th>
+                                        <th  id="example"><font color="purple">Item Name</font></th>
+                                        <th  id="example"><font color="purple">Item Number</font></th>
+                                        <th  id="example"><font color="purple">ocation Lost</font></th>
+                                        <th  id="example"><font color="purple">Item Description</font></th>
+                                        <th  id="example"><font color="purple">Owner</font></th> 
+                                        <th  id="example"><font color="purple">Found</font></th> 
+
+
                                     </tr>
                                 </thead>
                                 <tbody>
                  <?php
                  require "dbconnect.php";
-      $user_query=mysql_query("select * from users")or die(mysql_error());
+      $user_query=mysql_query("select * from lostitems")or die(mysql_error());
                   while($row=mysql_fetch_array($user_query)){
                   
              ?>
    <tr >
    <td  id="example"><font color="black"><?php echo $row['index']; ?></font></td>
-  <td  id="example"><font color="black"><?php echo $row['fname']; ?></font></td>                            
-   <td  id="example"><font color="black"><?php echo $row['sname']; ?></font></td>
-   <td  id="example"><font color="black"><?php echo $row['email']; ?></font> </td>
-  <td  id="example"><font color="black"><?php echo $row['phonenumber']; ?></font> </td>
-    <td  id="example"><font color="black"><?php echo $row['password']; ?></font> </td>  
-<td  id="example"><a rel="tooltip"  title="Delete" id="<?php echo  $row['fname']; ?>" onClick="return confirm('Are you sure you want to delete?')" href="delete_user.php?id=<?php echo $row['fname'];?>" data-toggle="modal"    class="btn btn-danger"><i class="icon-trash  icon-large"></i></a>
-<a  rel="tooltip"  title="Edit" id="<?php echo $row['fname']; ?>" href="update_users.php?id=<?php echo $row['fname'];?>" class="btn btn-info"><i class="icon-list icon-large"></i></a>
+  <td  id="example"><font color="black"><?php echo $row['itemtype']; ?></font></td>                            
+   <td  id="example"><font color="black"><?php echo $row['itemname']; ?></font></td>
+   <td  id="example"><font color="black"><?php echo $row['itemnumber']; ?></font> </td>
+  <td  id="example"><font color="black"><?php echo $row['locationlost']; ?></font> </td>
+    <td  id="example"><font color="black"><?php echo $row['itemdescription']; ?></font> </td>  
+   <td  id="example"><font color="black"><?php echo $row['owner']; ?></font> </td>  
+     <td  id="example"><font color="black"><?php echo $row['found']; ?></font> </td>  
+
+
+
                                     </td>
                   
                                     </tr>

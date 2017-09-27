@@ -1,6 +1,7 @@
-<?php
 
+<?php
 session_start();
+
 ?>
 <html lang="en">
 
@@ -80,14 +81,20 @@ session_start();
                     <li class="active">
                         <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
+                    
                     <li>
                         <a href="print.php"><i class="fa fa-fw fa-edit"></i> Print</a>
                     </li>
-                   
                     <li>
                         <a href="forms.php"><i class="fa fa-fw fa-edit"></i> Forms</a>
                     </li>
-                   
+                    <li>
+                        <a href="pay.php"><i class="fa fa-fw fa-edit"></i> View Payment</a>
+                    </li>
+                    <li>
+                        <a href="items.php"><i class="fa fa-fw fa-edit"></i> View Lost Items</a>
+                    </li>
+                    
 
                    
                  
@@ -127,19 +134,105 @@ session_start();
                 <!-- /.row -->
 
                 <div class="row">
-                    
-                    
-       
-                <a href="users_report.php"> <input type="button" value = "Print Users" class="btn btn-success"></a>
-                  
+                    <div class="col-lg-4 col-md-5">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">26</div>
+                                        <div>Add Lost Items!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Fill in Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+
+                            <form>
+                                <strong>Print Found Items</strong><a href="print_founditems.php"> <input type="button" value = "Print" class="btn btn-success"></a>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">12</div>
+                                        <div>Print Users!</div>
+                                          
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left"> Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                            <strong>Print Users</strong><a href="users_report.php"> <input type="button" value = "Print Users" class="btn btn-success"></a>
+                            <br>
+                            <strong>Print Pay</strong><a href="paymentreport.php"> <input type="button" value = "Print" class="btn btn-success"></a>
+                      
+                        </div>
+                    </div> 
+             
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">13</div>
+                                        <div>Print items!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Fill in Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+
+
+                     <form>
+                    <strong>Print Lost Items</strong> <a href="print_lostitems.php"> <input type="button" value = "Print" class="btn btn-success"></a>
+
+
+                    </form> 
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
-               
+                 <?php
+                    include "dbconnect.php";
+                    //$isthere = "no";
+                    //$sql1 = "SELECT * FROM founditems WHERE `claimed` = 'no'";
+                    //$result1 = mysql_query($sql1);
+                    //while($row1 = mysql_fetch_array($result1)){
+                      //  $isthere = "yes";
+                        ?>
+                      
                
                    
                 </div>
                 <!-- /.row -->
-                  <a href="paymentreport.php"> <input type="button" value = "Print Payment Results" class="btn btn-success"></a>
 
             </div>
             <!-- /.container-fluid -->

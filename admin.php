@@ -1,5 +1,6 @@
-<?php
 
+<?php
+session_start();
 
 ?>
 <html lang="en">
@@ -86,6 +87,12 @@
                     </li>
                     <li>
                         <a href="forms.php"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                    </li>
+                    <li>
+                        <a href="pay.php"><i class="fa fa-fw fa-edit"></i> View Payment</a>
+                    </li>
+                    <li>
+                        <a href="items.php"><i class="fa fa-fw fa-edit"></i> View Lost Items</a>
                     </li>
                     
 
